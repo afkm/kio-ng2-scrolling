@@ -1,6 +1,6 @@
 {
 	"name": "kio-ng2-scrolling",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "",
 	"main": "./release",
 	"module": "./release/module.js",
