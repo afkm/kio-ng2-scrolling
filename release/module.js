@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ScrollService } from './services/scroll.service';
+export { isScrollableComponent } from './interfaces/scrollable-component';
+export { ScrollService } from './services/scroll.service';
 var KioNg2ScrollingModule = /** @class */ (function () {
     function KioNg2ScrollingModule() {
     }
