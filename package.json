@@ -17,7 +17,6 @@
 		"deploy:release": "rm -rf ./release; mv ./build release",
 		"transpile": "npm run ngModule:build",
 		"ngModule:build": "./scripts/ngModule.sh build",
-		"ngModule:copy": "echo ./scripts/ngModule.sh copy /Users/tEErohr/Documents/kio/angular2/digit/digit-dev/digit-bma",
 		"build": "npm run ngModule:build",
 		"build:release": "NODE_ENV=production npm run build",
 		"build:release:watch": "./scripts/watch.sh build:release"

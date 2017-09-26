@@ -73,6 +73,37 @@ export class ScrollService {
       }
     } )
 
+  //protected _debug_scrollEvents=window.afkm.logger.observe(this,'scrollEvents')
+
+/*  get _scrollEvents():Observable<ScrollEvent> {
+    //console.trace('subscribe to scrollEvents')
+    if ( !this._events )
+    {
+      let lastScrollY = window.pageYOffset
+      const source = this.interval
+      //.withLatestFrom(this.nativeScrollEvent,(int,y)=>y)
+      .map ( i => window.pageYOffset )
+      //.filter( y => y !== lastScrollY )
+      .distinctUntilChanged()
+      .map ( y => {
+        const diff = y - lastScrollY
+        lastScrollY = y
+        return {
+          direction: diff < 0 ? ScrollDirection.down : ScrollDirection.up,
+          timestamp: Date.now(),
+          distance: Math.sqrt(Math.pow(diff,2))
+        }
+      } )
+      this._events = source
+        .catch ( error => {
+          console.log('error in scroll service', error)
+          return Observable.empty()
+        } )
+      
+    }
+    return this.pauseToggle.switchMap ( (paused:boolean) => paused ? Observable.never() : this._events )
+  }*/
+
   private _events:Observable<ScrollEvent>
   private _lastScrollY:number=window.pageYOffset
   private _lastScrollTimestamp:number=0
